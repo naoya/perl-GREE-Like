@@ -9,7 +9,7 @@ use GREE::Like;
 my $like = GREE::Like->new;
 $like->title('GREE');
 $like->url('http://gree.jp/');
-$like->image_url('http://gree.jp/images/logo.jpg');
+$like->image('http://gree.jp/images/logo.jpg');
 $like->type('website');
 
 print $like->to_meta;
@@ -18,8 +18,10 @@ print $like->to_button('http://bloghackers.net/~naoya/sandbox/like.html');
 ** output
 
 <meta property="og:title" content="GREE" />
-<meta property="og:type" content="website" />
 <meta property="og:url" content="http://gree.jp/" />
+<meta property="og:image" content="http://gree.jp/images/logo.jpg" />
+<meta property="og:type" content="website" />
+
 <iframe src="http://share.gree.jp/share?url=http%3A%2F%2Fbloghackers.net%2F~naoya%2Fsandbox%2Flike.html&amp;type=0&amp;height=20" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" style="border:none; overflow:hidden; width:100px; height:20px;" allowTransparency="true"></iframe>
 
 * TODO
